@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#111827"/>
+  <rect x="0" y="420" width="512" height="92" fill="#facc15"/>
+  <g fill="#111827">
+    <path d="M0 420h64l-64 92z"/><path d="M128 420h64l-64 92H64z"/><path d="M256 420h64l-64 92h-64z"/>
+    <path d="M384 420h64l-64 92h-64z"/><path d="M512 420v92h-64z"/>
+  </g>
+  <!-- forklift -->
+  <g fill="#facc15">
+    <rect x="100" y="210" width="190" height="120" rx="14"/>
+    <path d="M150 110h110l30 100H120z" fill="none" stroke="#facc15" stroke-width="22" stroke-linejoin="round"/>
+    <rect x="310" y="96" width="22" height="250" rx="6"/>
+    <rect x="310" y="322" width="110" height="20" rx="6"/>
+  </g>
+  <circle cx="150" cy="350" r="38" fill="#f3f4f6" stroke="#111827" stroke-width="14"/>
+  <circle cx="262" cy="350" r="38" fill="#f3f4f6" stroke="#111827" stroke-width="14"/>
+  <!-- alert badge -->
+  <circle cx="396" cy="150" r="78" fill="#dc2626" stroke="#111827" stroke-width="10"/>
+  <rect x="384" y="100" width="24" height="64" rx="10" fill="#fff"/>
+  <circle cx="396" cy="192" r="14" fill="#fff"/>
+</svg>

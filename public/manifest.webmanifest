@@ -1,0 +1,15 @@
+{
+  "name": "Forklift Down",
+  "short_name": "Forklift Down",
+  "description": "Report a forklift that is down or damaged, and log battery changes, in a few taps.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#111827",
+  "theme_color": "#111827",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

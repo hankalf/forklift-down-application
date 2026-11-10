@@ -1,0 +1,309 @@
+/* Manager dashboard additions on top of styles.css */
+
+main.wide {
+  max-width: 1280px;
+}
+
+body {
+  font-size: 16px;
+}
+
+.tabs {
+  position: sticky;
+  top: 60px;
+  z-index: 9;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  padding: 0 12px;
+  scrollbar-width: none;
+}
+.tabs a {
+  padding: 14px 14px 11px;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 700;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+.tabs a.active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+.stat {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.stat .n {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+.stat .l {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 14px;
+}
+.stat.down .n {
+  color: var(--down);
+}
+.stat.repair .n {
+  color: var(--repair);
+}
+.stat.available .n {
+  color: var(--ok);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 10px;
+}
+.lift-card {
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-left-width: 8px;
+  border-left-color: var(--ok);
+  border-radius: 12px;
+  padding: 10px 12px;
+  min-height: 92px;
+}
+.lift-card.down {
+  border-color: var(--down);
+  background: var(--down-bg);
+}
+.lift-card.repair {
+  border-left-color: var(--repair);
+}
+.lift-card .u {
+  font-size: 22px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.lift-card .s {
+  font-size: 13px;
+  color: var(--muted);
+}
+.lift-card a {
+  color: inherit;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 980px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 15px;
+}
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+th,
+td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+th {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  background: var(--bg);
+  white-space: nowrap;
+}
+tr:last-child td {
+  border-bottom: none;
+}
+tr.clickable {
+  cursor: pointer;
+}
+tr.clickable:hover td {
+  background: var(--bg);
+}
+td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.check-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.check-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--card);
+  font-weight: 600;
+  font-size: 15px;
+}
+.check-group label:has(input:checked) {
+  border-color: var(--info);
+  background: color-mix(in srgb, var(--info) 12%, var(--card));
+}
+.check-group input {
+  width: 18px;
+  height: 18px;
+}
+fieldset {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px 14px;
+  margin: 0;
+}
+legend {
+  font-weight: 800;
+  padding: 0 6px;
+}
+legend em {
+  font-weight: 400;
+  font-style: normal;
+  color: var(--muted);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+main.wide input[type='text'],
+main.wide input[type='number'],
+main.wide input[type='password'],
+main.wide input[type='email'],
+main.wide input[type='tel'],
+main.wide input[type='url'],
+main.wide input[type='time'],
+main.wide select,
+main.wide textarea {
+  min-height: 46px;
+  font-size: 16px;
+  padding: 8px 12px;
+}
+
+.rule {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.rule.off {
+  opacity: 0.55;
+}
+.rule .sentence {
+  flex: 1;
+}
+.rule .sentence b {
+  background: var(--bg);
+  border-radius: 6px;
+  padding: 0 4px;
+}
+
+.switch {
+  position: relative;
+  width: 52px;
+  height: 30px;
+  flex: none;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch span {
+  position: absolute;
+  inset: 0;
+  background: var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.switch span::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 3px;
+  top: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.15s;
+}
+.switch input:checked + span {
+  background: var(--ok);
+}
+.switch input:checked + span::before {
+  transform: translateX(22px);
+}
+.switch input:focus-visible + span {
+  outline: 3px solid var(--info);
+}
+
+.status-sent,
+.status-logged {
+  color: var(--ok);
+}
+.status-failed {
+  color: var(--down);
+  font-weight: 700;
+}
+.status-skipped {
+  color: var(--repair);
+}
+
+.subnav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.subnav button.active {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.bar {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+  min-width: 80px;
+}
+.bar > div {
+  height: 100%;
+}
+
+.login {
+  max-width: 380px;
+  margin: 10vh auto 0;
+}

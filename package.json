@@ -1,0 +1,21 @@
+{
+  "name": "forklift-down",
+  "version": "1.0.0",
+  "description": "Fast forklift down / damage reporting, battery tracking and rule-based alerts for warehouse teams.",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch src/server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test \"test/**/*.test.js\""
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemailer": "^10.5.0",
+    "qrcode": "^1.5.4"
+  }
+}
